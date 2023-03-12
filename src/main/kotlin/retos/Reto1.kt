@@ -9,5 +9,22 @@ package retos
  * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
  */
 class Reto1 {
+    fun fizzBuzz(){
+        for (i in 1..100){
+            if (i % 3 == 0 && i % 5 == 0){
+                println(i.toString()+" fizzbuzz")
+            }else{
+                if (i % 3 == 0){
+                    println(i.toString()+" fizz")
+                }
+                if (i % 5 == 0) {
+                    println(i.toString()+" buzz")
+                }
+            }
 
+
+
+
+        }
+    }
 }
