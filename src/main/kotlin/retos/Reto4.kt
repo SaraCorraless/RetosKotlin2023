@@ -16,23 +16,29 @@ class Reto4 {
         val lenghtPassword: Int = (8 .. 16).random()
         var password = ""
 
-        println(lenght)
-        for (element in 0 .. lenght){ // add choice of char type
-            var charType = (0 .. 4).random()
-            if (charType == 0){
-                password += randomChar(97, 122)
-            }
-            if (charType == 1){
-                password += randomChar(65, 90)
-            }
-            if (charType == 2){
-                password += randomChar(48, 57)
-            }
-            if (charType == 3){
-                password += randomChar(33, 48) //TO-DO: (58-65) (91-97)
-            }
+        println(lenght)//TO-DO: capturar error de longitud máxima y mínima
+        var type = mutableListOf(0, if (mayus) 1 else -1, if (nums) 2 else -1, if (simb) 3 else -1)
+        while (type.contains(-1)){
+            type.remove(-1)
+        }
+        for (element in 0 until lenght){
 
+            var charType = (type).random()
 
+            when(charType){
+                0->{
+                    password += randomChar(97, 122)
+                }
+                1 ->{
+                    password += randomChar(65, 90)
+                }
+                2 ->{
+                    password += randomChar(48, 57)
+                }
+                3 ->{
+                    password += randomChar(33, 48) //TO-DO: (58-65) (91-97)
+                }
+            }
         }
         println(password)
     }
