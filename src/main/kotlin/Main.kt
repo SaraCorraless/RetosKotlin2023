@@ -1,7 +1,7 @@
-import retos.Reto1
-import retos.Reto2
+import retos.*
 
 fun main(args: Array<String>) {
     //Reto1().fizzBuzz()
-    Reto2().lenguajeHacker("Texto a traducir: ")
+    //Reto2().lenguajeHacker("Texto a traducir: ")
+    Reto4().generadorPass(12, mayus = false, nums = true, simb = false)
 }
