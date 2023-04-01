@@ -9,4 +9,36 @@ package retos
  */
 class Reto4 {
 
+    fun resultReto4(){
+        esPar(3)
+        esPrimo(4)
+    }
+
+    private fun esFibonacci(num: Int): Boolean {
+        if (num % 2 == 0){
+            println("Es fibonacci")
+        }else{
+
+        }
+        return true
+    }
+
+    private fun esPrimo(num: Int): Boolean {
+        if (num % 1 == 0 && num % num == 0){
+            println("Es primo")
+        }else{
+
+        }
+        return true
+    }
+
+    private fun esPar(num: Int): Boolean {
+        if (num % 2 == 0){
+            println("Es par")
+        }else{
+
+        }
+        return true
+
+    }
 }
